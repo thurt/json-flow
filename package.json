@@ -4,7 +4,8 @@
   "description": "Transform JSON into flow type annotations automatically",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose --coverage",
+    "test:watch": "npm run test -- --watch"
   },
   "bin": "./bin.js",
   "repository": {
@@ -28,5 +29,8 @@
   "dependencies": {
     "commander": "^2.9.0",
     "oboe": "^2.1.2"
+  },
+  "devDependencies": {
+    "jest": "^19.0.2"
   }
 }
