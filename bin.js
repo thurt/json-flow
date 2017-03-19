@@ -4,7 +4,7 @@
 const fs = require('fs')
 const oboe = require('oboe')
 const program = require('commander')
-const doIt = require('./index')
+const jsonFlow = require('./index')
 
 program
   .option('-t, --tabs', 'Use tabs instead of spaces')
@@ -14,9 +14,9 @@ program
 let inputJson
 if (program.args[0]) {
   inputJson = fs.readFileSync(program.args[0])
-  console.log(doIt(JSON.parse(inputJson), program.spaceAmount, program.tabs))
+  console.log(jsonFlow(JSON.parse(inputJson), program.spaceAmount, program.tabs))
 }
 else {
   const stdin = process.stdin
-  oboe(stdin).done(text => console.log(doIt(text, program.spaceAmount, program.tabs))).fail(console.error)
+  oboe(stdin).done(text => console.log(jsonFlow(text, program.spaceAmount, program.tabs))).fail(console.error)
 }

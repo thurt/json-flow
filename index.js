@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function doIt(inputObject, spaceAmount, useTabs) {
+module.exports = function jsonFlow(inputObject, spaceAmount, useTabs) {
 
   function arrayToType (array, indentationLevel) {
     if (array.length > 0) {
@@ -25,7 +25,7 @@ module.exports = function doIt(inputObject, spaceAmount, useTabs) {
     const indentation = generateIndentation(indentationLevel + 1)
     for (const key in object) {
       const value = object[key]
-      type += `${indentation}"${key}": ${anyToType(value, indentationLevel + 1)},\n`
+      type += `${indentation}'${key}': ${anyToType(value, indentationLevel + 1)},\n`
     }
 
     return `${type}${generateIndentation(indentationLevel)}}`
