@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot for null input 1`] = `"void"`;
+
+exports[`matches snapshot for sampleJson using 2 spaces 1`] = `
+"{
+  'test-list': {
+    'id': number,
+    'properties': {
+      'name': string,
+    },
+  }[],
+  'empty-list': [],
+  'voided-property': void,
+}"
+`;
+
+exports[`matches snapshot for sampleJson using 4 spaces 1`] = `
+"{
+    'test-list': {
+        'id': number,
+        'properties': {
+            'name': string,
+        },
+    }[],
+    'empty-list': [],
+    'voided-property': void,
+}"
+`;
+
+exports[`matches snapshot for sampleJson using tabs 1`] = `
+"{
+	'test-list': {
+		'id': number,
+		'properties': {
+			'name': string,
+		},
+	}[],
+	'empty-list': [],
+	'voided-property': void,
+}"
+`;
+
+exports[`matches snapshot for undefined input 1`] = `"void"`;
